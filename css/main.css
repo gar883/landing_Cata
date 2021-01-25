@@ -75,7 +75,10 @@ p{
     color: white;
 }
 /*MENU RESPONSIVE*/
-
+.typed-cursor{
+    font-weight: bold;
+    font-size: 2.2rem;
+}
 
 .fixed {
     position: fixed;

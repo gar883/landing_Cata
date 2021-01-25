@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const typed = new Typed('.typed', {
     strings : [
         '<span class="letter">J</span>uan<span class="letter">R</span>obledo Developer.'],
-     typeSpeed : 120,
-     loop : false
+     typeSpeed : 100,
+     loop : false,
+     startDelay: 220
 
     
 
