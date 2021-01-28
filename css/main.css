@@ -157,6 +157,7 @@ p{
     float: left;
     border-radius: 100%;
     height: 30vh;
+    width :30vw;
     margin: 1rem ;
     border: 3px solid var(--ColorBarra);
 }
@@ -286,4 +287,7 @@ footer p{
     color: white;
     font-size: 1.2rem;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0575c0714b8cc7f9714434ac4044758f460a7acd
