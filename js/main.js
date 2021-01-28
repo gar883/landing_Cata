@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
   const typed = new Typed('.typed', {
     strings : [
-        '<span class="letter">J</span>uan<span class="letter">R</span>obledo Developer.'],
+        '<span class="letter">J</span>uan<span class="letter">R</span>obledo.'],
      typeSpeed : 100,
      loop : false,
      startDelay: 220
@@ -36,4 +36,14 @@ $( document ).ready(function() {
    $(function() {
     $('.demo').textillate({ in: { effect: 'rollIn' } });
 });
+    var menu = $('#btn-menu');
+    var icono = $('.iconMenu');
+    var navegacion = $('.navegacion a');
+
+    if (menu.prop('checked')){
+        navegacion.css('display', 'block');
+        icono.hide(1000);
+    }
+    
+
 });
