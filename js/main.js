@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
   const typed = new Typed('.typed', {
     strings : [
-        '<span class="letter">J</span>uan<span class="letter"> R</span>obledo.'],
+        '<span class="letter">J</span>uan<span class="letter"> R</span>obledo Developer.'],
      typeSpeed : 100,
      loop : false,
      startDelay: 220
@@ -11,40 +11,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
  });
 
 
-/*
-    var checkbox = document.getElementById('btn-menu');
-    var navegacion = document.querySelector(".navegacion");
-    var icono = document.querySelector(".icon");
-    
-    checkbox.addEventListener( 'change', function() {
-    if(this.checked) {
-       
-        navegacion.classList.add("inactivo");
-        icono.classList.remove("inactivo");
-        
-
-
-    } else {
-        navegacion.classList.remove("inactivo");
-        icono.classList.add("inactivo");
-        
-    }
-    
-    
-    navegacion.addEventListener("click" , function(event){
-        navegacion.classList.add("inactivo");
-        icono.classList.remove("inactivo");
-        checkbox.checked=1;
-    });
-   
-   
-    
-
-    });*/
 });
 
 $(document).ready(function() {
     // Handler for .ready() called.
+    $(function() {
+        $('.demo').textillate({ in: { effect: 'fadeIn' } });
+    });
    //MENU FIJO
    var ventanaAltura = $(window).height();
    var barraAltura = $('.menu').innerHeight();
