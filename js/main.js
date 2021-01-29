@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     var checkbox = document.getElementById('btn-menu');
     var navegacion = document.querySelector(".navegacion");
     var icono = document.querySelector(".icon");
+    Var secciones = documento.querySelectorAll("section");
     checkbox.addEventListener( 'change', function() {
     if(this.checked) {
        
@@ -35,7 +36,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
         checkbox.checked=1;
     });
    
-    
+    secciones.addEventListener("click" , function(event){
+        navegacion.classList.add("inactivo");
+        icono.classList.remove("inactivo");
+        checkbox.checked=1;
+    });
+   
     
 
 });
