@@ -63,6 +63,9 @@ $(document).ready(function() {
        }
 
    });
+
+   if ($(window).width() <= "992"){
+
    $("#navegacion").hide();
    $("#iconmenu").show();
    let checkbox = $("#btn-menu");
@@ -82,7 +85,10 @@ $(document).ready(function() {
             $("#navegacion").hide("slow");
             checkbox.prop("checked", false);
         });
+   
+
    });
+}
    
    
 
