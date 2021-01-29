@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
 
 
-});
+
     var checkbox = document.getElementById('btn-menu');
     var navegacion = document.querySelector(".navegacion");
     var icono = document.querySelector(".icon");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
-});
+
 $( document ).ready(function() {
     // Handler for .ready() called.
    //MENU FIJO
