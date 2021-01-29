@@ -231,6 +231,10 @@ ul li:hover{
         grid-template-rows: repeat(2,1fr);
         gap: 2rem;
     }
+   .perfil {
+        height : 10rem;
+        width : 10rem;
+  } 
 }
 /*CONTACTO*/
 .contacto{
