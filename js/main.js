@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         icono.classList.add("inactivo");
         
     }
-    
+    }
     
     navegacion.addEventListener("click" , function(event){
         navegacion.classList.add("inactivo");
