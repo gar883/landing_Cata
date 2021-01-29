@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
      loop : false,
      startDelay: 220
 
-    
+    ];
+ });
 
 
 
