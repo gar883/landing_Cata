@@ -11,6 +11,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 });
+    var checkbox = document.getElementById('btn-menu');
+    var navegacion = document.querySelector(".navegacion");
+    var icono = document.querySelector(".icon");
+    checkbox.addEventListener( 'change', function() {
+    if(this.checked) {
+       
+        navegacion.classList.add("inactivo");
+        icono.classList.remove("inactivo");
+        
+
+
+    } else {
+        navegacion.classList.remove("inactivo");
+        icono.classList.add("inactivo");
+        
+    }
+    
+    
+    navegacion.addEventListener("click" , function(event){
+        navegacion.classList.add("inactivo");
+        icono.classList.remove("inactivo");
+        checkbox.checked=1;
+    });
+   
+    
+    
+
+});
+
 });
 $( document ).ready(function() {
     // Handler for .ready() called.
@@ -33,17 +62,6 @@ $( document ).ready(function() {
 
    });
 
-   $(function() {
-    $('.demo').textillate({ in: { effect: 'rollIn' } });
-});
-    var menu = $('#btn-menu');
-    var icono = $('.iconMenu');
-    var navegacion = $('.navegacion a');
-
-    if (menu.prop('checked')){
-        navegacion.css('display', 'block');
-        icono.hide(1000);
-    }
     
 
 });
