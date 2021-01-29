@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
   const typed = new Typed('.typed', {
     strings : [
-        '<span class="letter">J</span>uan<span class="letter">R</span>obledo.'],
+        '<span class="letter">J</span>uan<span class="letter"> R</span>obledo.'],
      typeSpeed : 100,
      loop : false,
      startDelay: 220
