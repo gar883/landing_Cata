@@ -207,7 +207,7 @@ p{
 .twitter-timeline{
     height: 100vh;
     margin-bottom: 2px solid var(--ColorBarra);
-    padding: 1rem 2rem 1rem 1rem;
+    
 }
 @media only screen and (max-width: 992px) and (orientation: portrait){
     .sobremi{
@@ -258,6 +258,7 @@ ul li:hover{
     font-size: 2.5rem;
     
 }
+
 .tecno{
     display: grid;
     grid-template-columns: repeat(5,1fr);
@@ -279,6 +280,7 @@ ul li:hover{
         gap: 2rem;
         margin-right: 2rem;
     }
+    
    .perfil {
         height : 10rem;
         width : 10rem;

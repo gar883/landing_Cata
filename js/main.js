@@ -106,11 +106,15 @@ $(document).ready(function() {
 
    if ($(window).width() <= "992"){
 
+    $(".figma").show();
+
+
    $("#navegacion").hide();
    $("#iconmenu").show();
    let checkbox = $("#btn-menu");
    var navegacion = $(".navegacion");
    var icono = $(".iconMenu");
+   
     
    checkbox.on("change", function(event){
      if(this.checked){   
@@ -133,6 +137,8 @@ $(document).ready(function() {
    
 
    });
+} else{
+    $(".figma").hide();
 }
    
    
