@@ -54,8 +54,9 @@ p{
     background-color: var(--ColorBarra);
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 
     
 }
@@ -65,8 +66,9 @@ p{
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 700;
-    margin: .5rem;
+    margin: .2rem auto;
     transition: 0.8s; ;
+    padding: .5rem;
 }
 .menu a:last-of-type{
     border: 2px solid var(--colorPrincipal);
@@ -80,19 +82,24 @@ p{
     color: var(--colorPrincipal);
     transition: .8s;
     border: 2px solid var(--colorPrincipal);
-    padding: .5rem;
-}
+    
+} 
+
 /*MENU RESPONSIVE*/
 @media only screen and (max-width: 992px) and (orientation: portrait) {
     .menu h2{
         font-size: 1.2rem;
-        margin-left:  auto; 
+        margin-left:  1rem; 
         margin-right: auto;
     }
     .typed{
         font-size: 1.2rem;
         flex-basis: calc(66.6%);
+        
 
+    }
+    #general{
+        z-index: 1;
     }
     .navegacion{
         display: grid;
@@ -100,7 +107,12 @@ p{
         grid-template-rows: repeat(4, 1fr);
         visibility: visible;
         transition: ease-in;
+        gap: .5rem;
+        margin: 0 auto;
         
+    }
+    .navegacion a:last-of-type{
+        padding-right: 1rem;
     }
     .inactivo{
         visibility: hidden;
@@ -170,9 +182,11 @@ p{
 .sobremi{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    height: 35rem;
     gap: 1rem;
+    
 }
-.sobremi div{
+.pic{
     grid-column: 1 / 3;
     padding: 1rem;
     font-weight: 300;
@@ -182,31 +196,36 @@ p{
 .perfil{
     float: left;
     border-radius: 100%;
-    height: 15rem;
-    width :15rem;
+    max-height: 15rem;
+    max-width:15rem;
+    width: 100%;
+    height: 100%;
     margin: 1rem ;
     border: 3px solid var(--ColorBarra);
+    
 }
 .twitter-timeline{
     height: 100vh;
     margin-bottom: 2px solid var(--ColorBarra);
     padding: 1rem 2rem 1rem 1rem;
 }
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 992px) and (orientation: portrait){
     .sobremi{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
+        height: 75rem;
     }
-    .sobremi div{
+    .sobremi .pic{
        grid-row: 1 / 2; 
        margin-bottom: 0;
        padding-bottom: 0;
     }
-    .twitter-timeline{
+    .twitt{
         grid-row: 2/4;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        margin: 0 auto;
+
+        
     }
 
 }
@@ -271,6 +290,7 @@ ul li:hover{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 .sm a{
     display: inline-block;
@@ -280,7 +300,7 @@ ul li:hover{
     line-height: 7rem;
     text-align: center;
     color: var(--colorPrincipal);
-    margin: 0 1.6rem;
+    margin: 2rem 1.6rem;
     transition: .3s linear;
     position: relative;
 }
@@ -310,6 +330,95 @@ ul li:hover{
     border-bottom: 4px solid;
     transform: skewY(-20deg);
 }
+
+/*Flip card*/
+
+.contenedorFlip{
+    width: 30rem;
+    height: 18rem;
+    align-items: center;
+    text-align: center;
+    
+}
+.middle{
+    margin: 0 auto;
+}
+.front, .back{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    backface-visibility:hidden;
+    transition: transform .7s linear;
+    
+}
+.front{
+    width: 30rem;
+    height: 18rem;
+    position: absolute;
+    background: #EEE5E9;
+    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    transform: perspective(600px) rotateX(180deg);
+    border-radius: 5px;
+    
+    
+}
+.front h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.front span{
+    font-size: 1rem;
+    background-color: var(--ColorBarra);
+    color: white;
+    padding: .5rem;
+    
+}
+.front ul{
+    margin: 2rem auto;
+}
+.tag {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: justify;
+    margin: .5rem auto;
+    display: block;
+    margin: 1rem 0 0 3rem;
+    cursor: copy;
+}
+.tag i{
+    transform: none
+}
+.back{
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 30rem;
+    height: 18rem;
+    transform: perspective(600px) rotateX(0deg);
+    -webkit-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px 2px 9px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+.back h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+    font-family: oswald;
+    font-weight: 400;
+    font-family: lato;
+}
+.contenedorFlip:hover .front{
+    transform: perspective(600px) rotateX(0deg);
+}
+.contenedorFlip:hover .back{
+    transform: perspective(600px) rotateX(-180deg);
+}
 /*footer*/
 footer{
     background: var(--ColorBarra);
@@ -320,6 +429,18 @@ footer p{
     color: white;
     font-size: 1.2rem;
 }
+@media only screen and (max-width: 992px) and (orientation: portrait){
+    .contenedorFlip{
+        width: 25rem;
+        height: 12rem;
+        margin: 2rem;
+
+    }
+    .back{
+        margin: 2rem;
+    }
+}
+
 <<<<<<< HEAD
 
 =======
