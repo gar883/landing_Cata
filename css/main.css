@@ -430,14 +430,21 @@ footer p{
     font-size: 1.2rem;
 }
 @media only screen and (max-width: 992px) and (orientation: portrait){
-    .contenedorFlip{
-        width: 25rem;
-        height: 12rem;
-        margin: 2rem;
-
-    }
     .back{
-        margin: 2rem;
+        display: none;
+        transform: none;
+    }
+    .front{
+        display: block;
+        max-width: 600px;
+        min-height: 300px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        transform: none;
+    }
+    .front:hover, .back:hover{
+        transform: none;
     }
 }
 
