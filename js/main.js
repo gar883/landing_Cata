@@ -137,7 +137,7 @@ $(document).ready(function() {
    
 
    });
-} else{
+}else{
     $(".figma").hide();
 }
    
